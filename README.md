@@ -10,3 +10,8 @@ Simulador e Minimizador de Autômato Finito Determinístico
 #### Nome: Alyson José de Farias Ramos
 - Matrícula: 2020130399
 - GitHub: [AlysonFarias](https://github.com/alysonfarias)
+
+#### Nome: Marcos Rigel Silvestre da Silva
+- Matrícula: 202010974.2
+- GitHub: [MarcosRigel](https://github.com/MarcosRigel)
+
