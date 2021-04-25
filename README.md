@@ -26,9 +26,9 @@ Djalma 25/04: adicionando sistema de entrada de dados através do "dados.txt" lo
 
 ![image](https://user-images.githubusercontent.com/45500812/116007238-2d3d0680-a5e5-11eb-9838-873f6064f630.png)
 
-Foi importada a biblioteca BufferedReader para executar o processo.
-A string arquivo guarda o local do "dados.txt".
-O buffer instânciado, é capaz de ler linha a linha o .txt através do buffer.readLine().
-Com o while foi criado o padrão de parada ao encontrar uma linha que começe com um ponto.
+- Foi importada a biblioteca BufferedReader para executar o processo.
+- A string arquivo guarda o local do "dados.txt".
+- O buffer instânciado, é capaz de ler linha a linha o .txt através do buffer.readLine().
+- Com o while foi criado o padrão de parada ao encontrar uma linha que começe com um ponto.
 
 ![image](https://user-images.githubusercontent.com/45500812/116007353-cd932b00-a5e5-11eb-9bad-89bd7d61ce02.png)
