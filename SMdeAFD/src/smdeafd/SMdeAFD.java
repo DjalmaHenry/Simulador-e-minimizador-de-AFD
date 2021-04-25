@@ -11,7 +11,7 @@ public class SMdeAFD {
         String arquivo = "C:\\Users\\djalm\\Documents\\GitHub\\Simulador-e-minimizador-de-AFD\\AFD\\dados.txt";
         BufferedReader buffer = new BufferedReader(new FileReader(arquivo));
         String linha = buffer.readLine();
-        while (linha != null) {
+        while (linha.charAt(0) != '.') {
             System.out.println(linha);
             linha = buffer.readLine();
         }
