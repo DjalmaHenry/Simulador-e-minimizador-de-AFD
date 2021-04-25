@@ -15,3 +15,7 @@ Simulador e Minimizador de Autômato Finito Determinístico
 - Matrícula: 202010974.2
 - GitHub: [MarcosRigel](https://github.com/MarcosRigel)
 
+#### Nome: Lucas dos Santos Amorim Rêgo
+- Matrícula: 202010968-0
+- GitHub: [lucass235](https://github.com/lucass235)
+
