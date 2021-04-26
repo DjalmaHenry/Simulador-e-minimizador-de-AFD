@@ -1,20 +1,14 @@
 package smdeafd;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
 
 public class SMdeAFD {
 
-    public static void main(String[] args) throws FileNotFoundException, IOException {
-        String arquivo = "C:\\Users\\djalm\\Documents\\GitHub\\Simulador-e-minimizador-de-AFD\\AFD\\dados.txt";
-        BufferedReader buffer = new BufferedReader(new FileReader(arquivo));
-        String linha = buffer.readLine();
-        while (linha.charAt(0) != '.') {
-            System.out.println(linha);
-            linha = buffer.readLine();
-        }
+    public static void main(String[] args) throws IOException {
+        Arquivo arquivo = new Arquivo();
+        AFD afd = arquivo.instanciarArquivo();
+        arquivo.lerArquivo(afd);
+        afd.exibe();
     }
 
 }

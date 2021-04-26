@@ -1,0 +1,22 @@
+2 --> tamanho alfabeto
+3 --> quantidade de estados
+1 --> quantidade de estados finais
+.
+0 --> alfabeto
+1 --> alfabeto
+.
+q0 --> estado
+q1 --> estado
+q2 --> estado
+.
+q0 --> estado inicial
+.
+q2 --> estado final
+.
+0:q0-q1; --> transição
+1:q0-q0; --> transição
+0:q1-q2; --> transição
+1:q1-q2; --> transição
+0:q2-q2; --> transição
+1:q2-q2; --> transição
+.
