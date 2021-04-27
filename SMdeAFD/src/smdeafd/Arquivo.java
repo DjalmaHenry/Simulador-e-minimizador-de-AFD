@@ -12,7 +12,6 @@ public class Arquivo {
     private int tamAlfabeto;
     private int qtdEstados;
     private int qtdEstadosFinais;
-    private int qtdTransicoes;
 
     public AFD instanciarArquivo() throws FileNotFoundException, IOException {
         String arquivo = "C:\\Users\\djalm\\Documents\\GitHub\\Simulador-e-minimizador-de-AFD\\AFD\\dados.txt";
@@ -24,7 +23,6 @@ public class Arquivo {
         linha = buffer.readLine();
         this.qtdEstadosFinais = Integer.parseInt(linha);
         buffer.readLine();
-        this.qtdTransicoes = (qtdEstados + qtdEstadosFinais) * tamAlfabeto;
         AFD afd = new AFD(tamAlfabeto, qtdEstados);
         return afd;
     }
