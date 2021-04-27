@@ -69,7 +69,7 @@ public class Arquivo {
         }
 
         //reconhecendo estados finais
-        for (int i = 0; i < qtdEstados; i++) {
+        for (int i = 0; i < this.qtdEstados; i++) {
             for (int j = 0; j < this.qtdEstadosFinais; j++) {
                 if (estados[i].compareTo(estadosFinais[j]) == 0) {
                     afd.setFinais(i);
@@ -83,11 +83,14 @@ public class Arquivo {
         for (int i = 0; linha.charAt(0) != '.'; i++) {
 
             //leitura do alfabeto da transição
-            char transicao = linha.charAt(0);
-            alfabeto = afd.getAlfabeto();
+            int contSimbolo = 0;
+            for (int j = 0; linha.charAt(j) != ':'; j++) {
+                contSimbolo++;
+            }
+            String simbolo = linha.substring(0, contSimbolo);
             int qtdAlfabeto = 0;
             //encontrando posição no vetor de alfabeto
-            while (alfabeto[qtdAlfabeto].charAt(0) != transicao) {
+            while (alfabeto[qtdAlfabeto].compareTo(simbolo) != 0) {
                 qtdAlfabeto++;
             }
 
@@ -96,7 +99,7 @@ public class Arquivo {
             for (int j = 0; linha.charAt(j) != '-'; j++) {
                 contInicio++;
             }
-            String estadoInicio = linha.substring(2, contInicio);
+            String estadoInicio = linha.substring((contSimbolo + 1), contInicio);
             int qtdEstadoInicio = 0;
             //encontrando posição no vetor de estados
             while (estados[qtdEstadoInicio].compareTo(estadoInicio) != 0) {
