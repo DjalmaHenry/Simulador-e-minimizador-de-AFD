@@ -13,12 +13,12 @@ public class SMdeAFD {
         boolean validado = validacao.validar(afd);
         if (validado) {
             System.out.println("VALIDO");
+            MinimizaAFD minimizacao = new MinimizaAFD();
+            AFD minimizado = minimizacao.minimizar(afd);
+            minimizado.exibe();
         } else {
             System.err.println("NÃO VALIDO");
         }
-        MinimizaAFD minimizacao = new MinimizaAFD();
-        AFD minimizado = minimizacao.minimizar(afd);
-        minimizado.exibe();
     }
 
 }
