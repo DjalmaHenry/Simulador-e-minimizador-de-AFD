@@ -5,5 +5,5 @@ package smdeafd;
 // Minimiza AFD: Validar novos grupos formados.
 // Minimiza AFD: Criar um novo AFD.
 public class MinimizaAFD {
-    
+    public AFD minimizar(AFD afd){}
 }
