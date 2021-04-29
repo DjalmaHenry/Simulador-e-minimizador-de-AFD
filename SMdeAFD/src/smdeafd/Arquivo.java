@@ -14,7 +14,7 @@ public class Arquivo {
     private int qtdEstadosFinais;
 
     public AFD instanciarArquivo() throws FileNotFoundException, IOException {
-        String arquivo = "C:\\Users\\djalm\\Documents\\GitHub\\Simulador-e-minimizador-de-AFD\\AFD\\dados.txt";
+        String arquivo = "C:\\Users\\Pichau\\Desktop\\AFD\\dados.txt";
         BufferedReader buffer = new BufferedReader(new FileReader(arquivo));
         String linha = buffer.readLine();
         this.tamAlfabeto = Integer.parseInt(linha);
@@ -28,7 +28,7 @@ public class Arquivo {
     }
 
     public void lerArquivo(AFD afd) throws FileNotFoundException, IOException {
-        String arquivo = "C:\\Users\\djalm\\Documents\\GitHub\\Simulador-e-minimizador-de-AFD\\AFD\\dados.txt";
+        String arquivo = "C:\\Users\\Pichau\\Desktop\\AFD\\dados.txt";
         BufferedReader buffer = new BufferedReader(new FileReader(arquivo));
 
         //achando onde parou
