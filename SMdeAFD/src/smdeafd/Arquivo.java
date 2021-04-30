@@ -3,6 +3,7 @@ package smdeafd;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -120,4 +121,83 @@ public class Arquivo {
         //setando transições
         afd.setTransicoes(transicoes);
     }
+
+    public void saidaArquivo(AFD afd) throws IOException {
+        String arquivo = "C:\\Users\\djalm\\Documents\\GitHub\\Simulador-e-minimizador-de-AFD\\AFD\\saida.txt";
+        FileWriter saida = new FileWriter(arquivo);
+
+        //saida da quantidade de simbolos, estados e estados finais
+        String[] alfabeto = afd.getAlfabeto();
+        int tam = alfabeto.length;
+        String tamString = "" + tam;
+        saida.write(tamString);
+        saida.write("\n");
+        String[] estados = afd.getEstados();
+        tam = estados.length;
+        tamString = "" + tam;
+        saida.write(tamString);
+        saida.write("\n");
+        boolean[] finais = afd.getFinais();
+        tam = 0;
+        for (int i = 0; i < estados.length; i++) {
+            if (finais[i] == true) {
+                tam++;
+            }
+        }
+        tamString = "" + tam;
+        saida.write(tamString);
+        saida.write("\n");
+
+        saida.write(".");
+        saida.write("\n");
+
+        //saída do alfabeto
+        for (int i = 0; i < alfabeto.length; i++) {
+            saida.write(alfabeto[i]);
+            saida.write("\n");
+        }
+
+        saida.write(".");
+        saida.write("\n");
+
+        //saída dos estados
+        for (int i = 0; i < estados.length; i++) {
+            saida.write(estados[i]);
+            saida.write("\n");
+        }
+
+        saida.write(".");
+        saida.write("\n");
+
+        //saída do estado inicial
+        String estadoInicial = afd.getEstadoInicial();
+        saida.write(estadoInicial);
+        saida.write("\n");
+
+        saida.write(".");
+        saida.write("\n");
+
+        //saida dos estados finais
+        for (int i = 0; i < estados.length; i++) {
+            if (finais[i] == true) {
+                saida.write(estados[i]);
+                saida.write("\n");
+            }
+        }
+
+        saida.write(".");
+        saida.write("\n");
+
+        String[][] transicoes = afd.getTransicoes();
+        for (int i = 0; i < transicoes[0].length; i++) {
+            for (int j = 0; j < transicoes.length; j++) {
+                saida.write(alfabeto[j] + ":" + estados[i] + "-" + transicoes[j][i] + ";");
+                saida.write("\n");
+            }
+        }
+
+        saida.write(".");
+        saida.flush();
+    }
+
 }
