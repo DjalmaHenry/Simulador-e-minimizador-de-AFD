@@ -4,5 +4,4 @@ package smdeafd;
 // Validar AFD: Strings invalidas devem terminar em um estado não final.
 // Validar AFD: Não possui transições com o vazio.
 public class ValidaAFD {
-    public boolean validar(AFD afd){}
 }
