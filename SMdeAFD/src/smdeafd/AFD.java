@@ -13,7 +13,11 @@ public class AFD {
         this.estados = new String[estados];
         this.finais = new boolean[estados];
         this.transicoes = new String[alfabeto][estados];
-        
+    }
+
+    public AFD(String[] alfabeto, String[] estados) {
+        this.alfabeto = alfabeto;
+        this.estados = estados;
     }
 
     public String[] getAlfabeto() {
