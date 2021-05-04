@@ -8,6 +8,31 @@ public class MinimizaAFD {
 
     public AFD minimizar(AFD afd) {
         afd = eliminaInalcancaveis(afd);
+
+        //descobrindo quantidade de estados finais
+        boolean[] finais = afd.getFinais();
+        int contFinais = 0;
+        for (int i = 0; i < finais.length; i++) {
+            if (finais[i] == true) {
+                contFinais++;
+            }
+        }
+
+        String[] estados = afd.getEstados();
+        String[] estadosFinais = new String[contFinais];
+        String[] estadosNaoFinais = new String[estados.length - contFinais];
+
+        //separando estados finais e não finais
+        int j = 0, z = 0;
+        for (int i = 0; i < estados.length; i++) {
+            if (finais[i] == true) {
+                estadosFinais[j] = estados[i];
+                j++;
+            } else {
+                estadosNaoFinais[z] = estados[i];
+                z++;
+            }
+        }
     }
 
     public static AFD eliminaInalcancaveis(AFD afd) {
