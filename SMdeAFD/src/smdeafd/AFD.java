@@ -15,6 +15,14 @@ public class AFD {
         this.transicoes = new String[alfabeto][estados];
     }
 
+    public AFD(String[] alfabeto, String estadoInicial, String[] estados, boolean[] finais, String[][] transicoes) {
+        this.alfabeto = alfabeto;
+        this.estadoInicial = estadoInicial;
+        this.estados = estados;
+        this.finais = finais;
+        this.transicoes = transicoes;
+    }
+
     public String[] getAlfabeto() {
         return alfabeto;
     }
