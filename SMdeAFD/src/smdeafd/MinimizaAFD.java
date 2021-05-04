@@ -33,6 +33,7 @@ public class MinimizaAFD {
                 z++;
             }
         }
+        //incompleto
     }
 
     public static AFD eliminaInalcancaveis(AFD afd) {
